@@ -17,12 +17,12 @@ namespace TestXamarin.Forms.Services
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description.", User="Tim" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description.", User="Dan" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description.", User="Christa" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description.", User="Tim" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description.", User="Christa" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description.", User="Tim" },
             };
 
             foreach (var item in mockItems)

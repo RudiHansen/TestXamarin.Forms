@@ -8,9 +8,12 @@ using TestXamarin.Forms.ViewModels;
 
 namespace TestXamarin.Forms.Views
 {
+
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ItemDetailPage : ContentPage
 	{
+        public string[] users = { "Tim", "Dan", "Christa" };
+
         ItemDetailViewModel viewModel;
 
         public ItemDetailPage(ItemDetailViewModel viewModel)
