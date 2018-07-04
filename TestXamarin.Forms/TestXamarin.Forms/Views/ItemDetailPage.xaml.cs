@@ -13,27 +13,13 @@ namespace TestXamarin.Forms.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ItemDetailPage : ContentPage
 	{
-        public string[] users = { "Tim", "Dan", "Christa" };
-
-        public class User
-        {
-            public string Name { get; set; }
-            public string Description { get; set; }
-        }
-
-        public List<User> userList = new List<User>();
-
         ItemDetailViewModel viewModel;
-
 
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
-            userList.Add(new User { Name = "Tim", Description = "Tim Parson" });
-            userList.Add(new User { Name = "Dan", Description = "Dan Parson" });
-            userList.Add(new User { Name = "Christa", Description = "Christa Parson" });
         }
 
         public ItemDetailPage()
