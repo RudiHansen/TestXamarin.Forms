@@ -7,7 +7,7 @@
         <Label Text="Text:" FontSize="Medium" />
         <Label Text="{Binding Item.Text}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
-        <Picker Title="User" ItemsSource="{Binding Users}" ItemDisplayBinding="{Binding User.Name}" SelectedItem="{Binding Item.User}"/>
+        <Picker Title="User" ItemsSource="{Binding Users}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedUser}"/>
         <Editor Text="{Binding Item.Description, Mode=TwoWay}" FontSize="Small"/>
     </StackLayout>
 </ContentPage>
