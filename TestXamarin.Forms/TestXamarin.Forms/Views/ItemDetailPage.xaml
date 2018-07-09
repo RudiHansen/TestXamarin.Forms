@@ -3,11 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestXamarin.Forms.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <StackLayout Spacing="20" Padding="15">
+    <!--<StackLayout Spacing="20" Padding="15">
         <Label Text="Text:" FontSize="Medium" />
         <Label Text="{Binding Item.Text}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
         <Picker Title="User" ItemsSource="{Binding Users}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedUser}"/>
         <Editor Text="{Binding Item.Description, Mode=TwoWay}" FontSize="Small"/>
-    </StackLayout>
+    </StackLayout>-->
+    <ScrollView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="80*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" Text="TaskId:" FontSize="Small" />
+            <Entry Grid.Column="1" Grid.Row="0" Text="TASK01" FontSize="Small"/>
+
+            <Label Grid.Column="0" Grid.Row="1" Text="Name:" FontSize="Small" />
+            <Entry Grid.Column="1" Grid.Row="1" Text="Task Name" FontSize="Small"/>
+
+            <Label  Grid.Column="0" Grid.Row="2" Text="Developer:" FontSize="Small" />
+            <Entry  Grid.Column="1" Grid.Row="2" Text="Jack" FontSize="Small" />
+
+            <Label  Grid.Column="0" Grid.Row="3" Text="Owner:" FontSize="Small" />
+            <Entry  Grid.Column="1" Grid.Row="3" Text="Jill" FontSize="Small" />
+
+            <Label  Grid.Column="0" Grid.Row="4" Text="Status:" FontSize="Small" />
+            <Entry  Grid.Column="1" Grid.Row="4" Text="In Progress" FontSize="Small" />
+
+            <Label  Grid.Column="0" Grid.Row="5" Text="Version:" FontSize="Small" />
+            <Entry  Grid.Column="1" Grid.Row="5" Text="1.0.0.2" FontSize="Small" />
+
+            <Label  Grid.Column="0" Grid.Row="6" Text="Module:" FontSize="Small" />
+            <Entry  Grid.Column="1" Grid.Row="6" Text="Test" FontSize="Small" />
+
+            <Label  Grid.Column="0" Grid.Row="7" Text="Priority:" FontSize="Small" />
+            <Entry  Grid.Column="1" Grid.Row="7" Text="Normal" FontSize="Small" />
+
+            <Label   Grid.Column="0" Grid.Row="8" Text="Estimate:" FontSize="Small" />
+            <Entry   Grid.Column="1" Grid.Row="8" Text="4.0 Hours" FontSize="Small" />
+
+            <Label      Grid.Column="0" Grid.Row="9" Text="Start Date:" FontSize="Small" />
+            <Entry      Grid.Column="1" Grid.Row="9" Text="2018-07-07" FontSize="Small" />
+
+            <Label Grid.Column="0"  Grid.Row="10" Text="Note:" FontSize="Small" />
+            <Editor Grid.Column="1" Grid.Row="10" Text="This is my test note" FontSize="Small"/>
+
+            <Label Grid.Column="0"  Grid.Row="11" Text="NoteDev:" FontSize="Small" />
+            <Editor Grid.Column="1" Grid.Row="11" Text="This is the second note" FontSize="Small"/>
+
+            <Label Grid.Column="0"  Grid.Row="12" Text="NoteCV:" FontSize="Small" />
+            <Editor Grid.Column="1" Grid.Row="12" Text="Stuff on line1&#x0a;Stuff on line 2" FontSize="Small"/>
+
+            <Label Grid.Column="0" Grid.Row="13" Text="Last Edit:" FontSize="Small" />
+            <Entry Grid.Column="1" Grid.Row="13" Text="2018-07-09" FontSize="Small"/>
+
+            <Label Grid.Column="0" Grid.Row="14" Text="By:" FontSize="Small" />
+            <Entry Grid.Column="1" Grid.Row="14" Text="Someone" FontSize="Small"/>
+        </Grid>
+    </ScrollView>
 </ContentPage>

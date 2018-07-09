@@ -8,3 +8,5 @@ I will try to keep this updated with the things i Test.
 	ViewModels/BaseViewModel.cs				Made a change to OnPropertyChanged, not sure its needed
 	ViewModels/ItemDetailViewModel.cs		Add (IList<User> Users), (User SelectedUser), and code for updating Item.User with selected selectedUser.Name
 	Views/ItemDetailPage.xaml				Changed Picker Binding (Line 10)
+2. Test of pagelayout
+	Views/ItemDetailPage.xaml				Added the layout i am testing
