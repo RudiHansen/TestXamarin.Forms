@@ -17,6 +17,24 @@
                 <ColumnDefinition Width="80*" />
             </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" /> <!--Row 0  TaskId -->
+                <RowDefinition Height="Auto" /> <!--Row 1  Name   -->
+                <RowDefinition Height="Auto" /> <!--Row 2  Developer -->
+                <RowDefinition Height="Auto" /> <!--Row 3  Owner  -->
+                <RowDefinition Height="Auto" /> <!--Row 4  Status -->
+                <RowDefinition Height="Auto" /> <!--Row 5  Version -->
+                <RowDefinition Height="Auto" /> <!--Row 6  Module -->
+                <RowDefinition Height="Auto" /> <!--Row 7  Priority-->
+                <RowDefinition Height="Auto" /> <!--Row 8  Estimate -->
+                <RowDefinition Height="Auto" /> <!--Row 9  Start Date-->
+                <RowDefinition Height="Auto" /> <!--Row 10 Note -->
+                <RowDefinition Height="Auto" /> <!--Row 11 NoteDev -->
+                <RowDefinition Height="Auto" /> <!--Row 12 NoteCV-->
+                <RowDefinition Height="Auto" /> <!--Row 13 Last Edit -->
+                <RowDefinition Height="Auto" /> <!--Row 14 By -->
+            </Grid.RowDefinitions>
+
             <Label Grid.Column="0" Grid.Row="0" Text="TaskId:" FontSize="Small" />
             <Entry Grid.Column="1" Grid.Row="0" Text="TASK01" FontSize="Small"/>
 
@@ -48,13 +66,13 @@
             <Entry      Grid.Column="1" Grid.Row="9" Text="2018-07-07" FontSize="Small" />
 
             <Label Grid.Column="0"  Grid.Row="10" Text="Note:" FontSize="Small" />
-            <Editor Grid.Column="1" Grid.Row="10" Text="This is my test note" FontSize="Small"/>
+            <Editor Grid.Column="1" Grid.Row="10" Text="This is my test note" FontSize="Small" HeightRequest="120"/>
 
             <Label Grid.Column="0"  Grid.Row="11" Text="NoteDev:" FontSize="Small" />
-            <Editor Grid.Column="1" Grid.Row="11" Text="This is the second note" FontSize="Small"/>
+            <Editor Grid.Column="1" Grid.Row="11" Text="This is the second note" FontSize="Small" HeightRequest="120"/>
 
             <Label Grid.Column="0"  Grid.Row="12" Text="NoteCV:" FontSize="Small" />
-            <Editor Grid.Column="1" Grid.Row="12" Text="Stuff on line1&#x0a;Stuff on line 2" FontSize="Small"/>
+            <Editor Grid.Column="1" Grid.Row="12" Text="Stuff on line1&#x0a;Stuff on line 2" FontSize="Small" HeightRequest="120"/>
 
             <Label Grid.Column="0" Grid.Row="13" Text="Last Edit:" FontSize="Small" />
             <Entry Grid.Column="1" Grid.Row="13" Text="2018-07-09" FontSize="Small"/>
