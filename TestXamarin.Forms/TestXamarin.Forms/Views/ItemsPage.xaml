@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:suave="clr-namespace:SuaveControls.DynamicWrapLayout;assembly=SuaveControls.DynamicWrapLayout"
              x:Class="TestXamarin.Forms.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
@@ -15,23 +14,7 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ScrollView>
-            <suave:DynamicWrapLayout x:Name="ItemsListView" 
-                                     ItemsSource="{Binding Items}" 
-                                     HorizontalOptions="Fill"
-                                     >
-                <suave:DynamicWrapLayout.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout BackgroundColor="Gray" WidthRequest="120" HeightRequest="180">
-                            <!--<Label Text="{Binding .}" TextColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />-->
-                            <Label Text="{Binding Text}" LineBreakMode="NoWrap"  />
-                            <Label Text="{Binding Description}" LineBreakMode="NoWrap"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </suave:DynamicWrapLayout.ItemTemplate>
-            </suave:DynamicWrapLayout>
-        </ScrollView>
-        <!--<StackLayout>
+        <StackLayout>
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Items}"
                     VerticalOptions="FillAndExpand"
@@ -56,6 +39,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>-->
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
