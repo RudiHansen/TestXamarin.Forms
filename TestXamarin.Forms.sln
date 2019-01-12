@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXamarin.Forms.Android",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXamarin.Forms.UWP", "TestXamarin.Forms\TestXamarin.Forms.UWP\TestXamarin.Forms.UWP.csproj", "{E8DAB952-6FF3-4BB0-A7DE-DCE84C7AC109}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestXamarin.Forms", "TestXamarin.Forms\TestXamarin.Forms\TestXamarin.Forms.csproj", "{7796A515-365B-49D8-AEB9-F76B1FBA8E52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestXamarin.Forms", "TestXamarin.Forms\TestXamarin.Forms\TestXamarin.Forms.csproj", "{7796A515-365B-49D8-AEB9-F76B1FBA8E52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C78F685F-0B04-4416-9532-CD17DFFB9D33}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
