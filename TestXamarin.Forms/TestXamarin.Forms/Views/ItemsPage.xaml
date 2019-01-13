@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:suave="clr-namespace:SuaveControls.DynamicWrapLayout;assembly=SuaveControls.DynamicWrapLayout"
              x:Class="TestXamarin.Forms.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
@@ -14,7 +15,30 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <suave:DynamicWrapLayout ItemsSource="{Binding Items}"
+                    VerticalOptions="FillAndExpand">
+            <suave:DynamicWrapLayout.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Margin="5" 
+                                   BorderColor="{Binding Color}" 
+                                   CornerRadius="5" 
+                                   VerticalOptions="CenterAndExpand" 
+                                   HorizontalOptions="Center">
+                            <StackLayout>
+                                <Label Text="{Binding Text}" LineBreakMode="NoWrap" 
+                                               Style="{DynamicResource ListItemTextStyle}" 
+                                               FontSize="16" />
+                                <Label Text="{Binding Description}" LineBreakMode="NoWrap"
+                                               Style="{DynamicResource ListItemDetailTextStyle}"
+                                               FontSize="13" />
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </suave:DynamicWrapLayout.ItemTemplate>
+        </suave:DynamicWrapLayout>
+        <!--<StackLayout>
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Items}"
                     VerticalOptions="FillAndExpand"
@@ -46,6 +70,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>
