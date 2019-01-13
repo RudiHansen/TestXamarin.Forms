@@ -18,23 +18,30 @@
             <ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Items}"
                     VerticalOptions="FillAndExpand"
-                     HasUnevenRows="true"
-                     RefreshCommand="{Binding LoadItemsCommand}"
-                     IsPullToRefreshEnabled="true"
-                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                     CachingStrategy="RetainElement"
-                     ItemSelected="OnItemSelected">
+                    HasUnevenRows="true"
+                    RefreshCommand="{Binding LoadItemsCommand}"
+                    IsPullToRefreshEnabled="true"
+                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                    CachingStrategy="RetainElement"
+                    ItemSelected="OnItemSelected"
+                    >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Text}" LineBreakMode="NoWrap" 
-                                           Style="{DynamicResource ListItemTextStyle}" 
-                                           FontSize="16" />
-                                <Label Text="{Binding Description}" LineBreakMode="NoWrap"
-                                           Style="{DynamicResource ListItemDetailTextStyle}"
-                                           FontSize="13" />
-                            </StackLayout>
+                            <Frame Margin="5" 
+                                   BorderColor="{Binding Color}" 
+                                   CornerRadius="5" 
+                                   VerticalOptions="CenterAndExpand" 
+                                   HorizontalOptions="Center"> 
+                                <StackLayout>
+                                    <Label Text="{Binding Text}" LineBreakMode="NoWrap" 
+                                               Style="{DynamicResource ListItemTextStyle}" 
+                                               FontSize="16" />
+                                    <Label Text="{Binding Description}" LineBreakMode="NoWrap"
+                                               Style="{DynamicResource ListItemDetailTextStyle}"
+                                               FontSize="13" />
+                                </StackLayout>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
